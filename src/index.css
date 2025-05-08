@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+
+
+@keyframes stars {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -1000px 1000px;
+    }
+  }
+  
+  @keyframes planetFloatSlow {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(2deg);
+    }
+  }
+  
+  @keyframes planetFloatMedium {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(-2deg);
+    }
+  }
+  
+  .animate-stars {
+    animation: stars 60s linear infinite;
+  }
+  
+  .animate-planet-slow {
+    animation: planetFloatSlow 10s ease-in-out infinite;
+  }
+  
+  .animate-planet-medium {
+    animation: planetFloatMedium 8s ease-in-out infinite;
+  }
+  
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { text-shadow: 0 0 10px #f472b6; }
+    50% { text-shadow: 0 0 20px #f472b6; }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+  
+  .animate-glow {
+    animation: glow 1.5s infinite alternate;
+  }
+  
